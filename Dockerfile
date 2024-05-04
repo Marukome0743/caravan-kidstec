@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:labs
-FROM node:22.0.0 as base
+FROM node:22.1.0 as base
 WORKDIR /app
 RUN npm install -g bun
 
@@ -13,7 +13,7 @@ COPY . .
 RUN bun test
 RUN bun run build
 
-FROM gcr.io/distroless/nodejs20-debian12:nonroot
+FROM gcr.io/distroless/nodejs22-debian12:nonroot
 WORKDIR /app
 COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.8.3 /lambda-adapter /opt/extensions/lambda-adapter
 
