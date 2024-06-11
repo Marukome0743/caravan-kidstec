@@ -44,7 +44,7 @@ export function Footer(): React.JSX.Element {
         </ul>
       </nav>
       <aside className="flex justify-between items-center gap-4 w-full">
-        <p>
+        <p className="text-sm">
           Copyright © Open Up Group Inc. <br className="block sm:hidden" />
           All rights reserved.
         </p>
