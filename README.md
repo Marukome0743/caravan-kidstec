@@ -31,7 +31,7 @@
     <img src="https://img.shields.io/badge/-visual%20studio%20code-007ACC.svg?logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="vscode">
   </a>
   <a aria-label="devcontainer" href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenUp-LabTakizawa/caravan-kidstec">
-    <img src="https://img.shields.io/badge/-open-007ACC.svg?label=dev%20containers&logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="vscode">
+    <img src="https://img.shields.io/badge/-open-007ACC.svg?label=dev%20containers&logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="devcontainer">
   </a>
   <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/caravan-kidstec/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/caravan-kidstec?style=for-the-badge&labelColor=000000" alt="License">
