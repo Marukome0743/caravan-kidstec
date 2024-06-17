@@ -13,7 +13,7 @@ export function Footer(): React.JSX.Element {
               {item.href && (
                 <Link
                   href={item.href as string}
-                  className="break-keep font-bold link-hover"
+                  className="font-bold link-hover"
                 >
                   <item.icon className={`size-5 ${item.color}`} />
                   {item.name}
@@ -21,7 +21,7 @@ export function Footer(): React.JSX.Element {
               )}
               {item.content && (
                 <>
-                  <span className="break-keep font-bold">
+                  <span className="font-bold">
                     <item.icon className={`size-5 ${item.color}`} />
                     {item.name}
                   </span>
