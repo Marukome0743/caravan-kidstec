@@ -31,7 +31,7 @@ export function Divider(): React.JSX.Element {
   })
 
   return (
-    <div ref={ref} className={`divider mx-auto ${isShown && "stretch"}`}>
+    <div ref={ref} className={`divider mx-auto${isShown ? " stretch" : ""}`}>
       <HashtagIcon className="size-10" />
     </div>
   )
