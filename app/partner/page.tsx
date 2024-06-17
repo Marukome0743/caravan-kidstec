@@ -11,7 +11,7 @@ export default function Partner(): React.JSX.Element {
         <h2 className="font-bold text-2xl text-center sm:col-span-2">
           広島エリア
         </h2>
-        <section className="bg-base-200 grid gap-4 p-4 w-fit mx-auto">
+        <section className="bg-base-200 grid gap-4 mx-auto p-4 w-fit">
           <h3 className="font-bold text-center text-xl">
             <Link href="https://bplab.biz/" target="_blank" className="link">
               BPL Inc.
@@ -25,7 +25,7 @@ export default function Partner(): React.JSX.Element {
             className="w-full sm:max-h-60 sm:object-contain"
           />
         </section>
-        <section className="bg-base-200 grid gap-4 p-4 w-fit mx-auto">
+        <section className="bg-base-200 grid gap-4 mx-auto p-4 w-fit">
           <h3 className="font-bold text-center text-xl">
             <Link href="https://fuudo.jp/" target="_blank" className="link">
               一般社団法人 フウド
@@ -39,7 +39,7 @@ export default function Partner(): React.JSX.Element {
             className="w-full sm:max-h-60 sm:object-contain"
           />
         </section>
-        <section className="bg-base-200 grid gap-4 p-4 w-fit mx-auto">
+        <section className="bg-base-200 grid gap-4 mx-auto p-4 w-fit">
           <h3 className="font-bold text-center text-xl">
             <Link
               href="https://sanken-hiroshima.org/"
@@ -59,7 +59,7 @@ export default function Partner(): React.JSX.Element {
             className="w-full sm:max-h-60 sm:object-contain"
           />
         </section>
-        <section className="bg-base-200 grid gap-4 p-4 w-fit mx-auto">
+        <section className="bg-base-200 grid gap-4 mx-auto p-4 w-fit">
           <h3 className="font-bold text-center text-xl">広島大学 さんけん部</h3>
           <Image
             src="https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/sanken_club.webp"
