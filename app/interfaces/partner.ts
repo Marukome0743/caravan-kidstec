@@ -1,7 +1,6 @@
-export type Organization = {
+export type Partner = {
   name: string
   href?: string
   src: string
   business: string
-  purpose: string
 }

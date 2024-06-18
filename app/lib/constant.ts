@@ -1,7 +1,8 @@
 import type { Carousel } from "@/app/interfaces/carousel"
 import type { Navigation } from "@/app/interfaces/navigation"
-import type { Organization } from "@/app/interfaces/organization"
+import type { Partner } from "@/app/interfaces/partner"
 import type { SiteUrl } from "@/app/interfaces/siteUrl"
+import type { Supporter } from "@/app/interfaces/supporter"
 import {
   HeartIcon,
   NewspaperIcon,
@@ -120,37 +121,48 @@ export const carouselItems: Carousel[] = [
   },
 ] as const
 
-export const partners: Organization[] = [
+export const ChibaPartners: Partner[] = [
+  {
+    name: "クルックフィールズ",
+    href: "https://kurkkufields.jp/",
+    src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/kurkkufields_logo.webp",
+    business: "サステナブルファーム＆\nパーク事業",
+  },
+  {
+    name: "CLASSROOM ADVENTURE",
+    href: "https://www.classroom-adventure.com/",
+    src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/classroom-adventure_logo.svg",
+    business: "メディアリテラシー教育事業",
+  },
+  {
+    name: "griteen",
+    href: "https://griteen.com/",
+    src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/griteen_logo.webp",
+    business: "プログラミングスクール事業",
+  },
+]
+
+export const HiroshimaPartners: Partner[] = [
   {
     name: "BPL Inc.",
     href: "https://bplab.biz/",
     src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/bpl_logo.svg",
     business: "地域まちづくり事業",
-    purpose: "地域をイノベーションの聖地へ",
   },
   {
     name: "一般社団法人 フウド",
     href: "https://fuudo.jp/",
     src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/fuudo_logo.webp",
     business: "江田島市周辺の\n地域活性化事業",
-    purpose: "「縁」がつながる機会と\n場所を作っていく",
-  },
-  {
-    name: "NPO法人 三段峡・\n太田川流域研究会",
-    href: "https://sanken-hiroshima.org/",
-    src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/sanken_logo.webp",
-    business: "三段峡の保全と観光事業",
-    purpose: "100年後もあなたにとっての\n『ここ』が続いているために",
   },
   {
     name: "広島大学 さんけん部",
     src: "https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/sanken_club_logo.webp",
     business: "三段峡の保全と観光事業",
-    purpose: "100年後もあなたにとっての\n『ここ』が続いているために",
   },
 ]
 
-export const supporters: Organization[] = [
+export const supporters: Supporter[] = [
   {
     name: "ICHI COMMONS株式会社",
     href: "https://ichicommons.com/",
