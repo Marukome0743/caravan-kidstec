@@ -12,6 +12,7 @@ export default function History(): React.JSX.Element {
         autoPlay={true}
         loop={true}
         muted={true}
+        playsInline={true}
         preload="auto"
         className="mx-auto w-full"
       >
