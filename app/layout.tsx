@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Header />
-        <main className="bg-gray-50 p-4">
+        <main className="bg-base-100 p-4">
           {children}
           <ScrollToTop />
         </main>
