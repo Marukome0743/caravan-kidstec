@@ -93,17 +93,34 @@ export default function Home(): React.JSX.Element {
         <Link href="https://robosava.jp/" target="_blank">
           <figure className="w-full">
             <Image
-              src="https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/logo/robot-survival_logo.webp"
+              src="https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/202307/final_stage/course_challenge.webp"
               height={1000}
               width={1000}
               alt="ロボサバ"
               className="object-contain w-full"
             />
             <figcaption className="bg-base-200 font-bold py-1 text-center">
-              プログラミング体験
+              ロボサバ
             </figcaption>
           </figure>
         </Link>
+      </section>
+      <section className="grid gap-4">
+        <h2 className="font-bold font-zenMaruGothic text-3xl text-orange-400">
+          自然学習
+        </h2>
+        <figure className="w-full">
+          <Image
+            src="https://caravan-kidstec.s3.ap-northeast-1.amazonaws.com/202307/sandankyo/pointing_leaf.webp"
+            height={1000}
+            width={1000}
+            alt="自然学習"
+            className="object-contain w-full"
+          />
+          <figcaption className="bg-base-200 font-bold py-1 text-center">
+            三段峡
+          </figcaption>
+        </figure>
       </section>
       <section id="about" className="grid gap-4">
         <h2 className="font-bold font-zenMaruGothic text-3xl text-orange-400">
