@@ -74,7 +74,7 @@ export default function Home(): React.JSX.Element {
         <p className="font-semibold">
           2024年9月14日・21日・22日、
           <br />
-          <span className="text-teal-400">千葉・東京エリア</span>で開催決定！
+          <span className="text-rose-400">千葉・東京エリア</span>で開催決定！
         </p>
         <Link href="https://lin.ee/nWiS1Sq">
           <button type="button" className="bg-info btn text-lg text-white">
@@ -90,7 +90,7 @@ export default function Home(): React.JSX.Element {
         <PanelTile panelItems={TechPanelItems} />
       </section>
       <section className="grid grid-cols-2 gap-4">
-        <h2 className="col-span-2 font-bold font-zenMaruGothic text-3xl text-orange-400">
+        <h2 className="col-span-2 font-bold font-zenMaruGothic text-3xl text-teal-400">
           自然学習
         </h2>
         <PanelTile panelItems={NaturePanelItems} />
