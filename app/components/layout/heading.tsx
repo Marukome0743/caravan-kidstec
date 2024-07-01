@@ -6,7 +6,7 @@ import type React from "react"
 export function Heading({
   content,
   href,
-}: Readonly<{ content: string; href: string }>): React.JSX.Element {
+}: Readonly<{ content: string; href?: string }>): React.JSX.Element {
   const crumb: Navigation = navigation.filter(
     (item) => item.name === content,
   )[0]
