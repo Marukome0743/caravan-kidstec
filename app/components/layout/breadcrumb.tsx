@@ -6,7 +6,7 @@ import type React from "react"
 export function Breadcrumb({
   crumb,
   href,
-}: Readonly<{ crumb: Navigation; href: string }>): React.JSX.Element {
+}: Readonly<{ crumb: Navigation; href?: string }>): React.JSX.Element {
   const content = crumb.content?.filter((item) => item.href === href)[0]
 
   return (

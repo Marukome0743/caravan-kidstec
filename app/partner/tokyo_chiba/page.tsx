@@ -1,12 +1,14 @@
 import { Heading } from "@/app/components/layout/heading"
+import { TOKYO_CHIBA } from "@/app/lib/constant"
+import { PARTNER } from "@/app/lib/constant"
 import { Partner } from "@/app/partner/partner"
 import type React from "react"
 
 export default function Chiba(): React.JSX.Element {
   return (
     <>
-      <Heading content="パートナー" href="/tokyo_chiba" />
-      <Partner area="Chiba" />
+      <Heading content={PARTNER.name} href={TOKYO_CHIBA.href} />
+      <Partner area={TOKYO_CHIBA.name} />
     </>
   )
 }
