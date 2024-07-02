@@ -64,6 +64,10 @@ export function PlanCarousel({
     })
   }
 
+  useEffect(() => {
+    setInnerWidth(window.innerWidth)
+  },[])
+
   return (
     <div className="carousel max-w-full mx-auto p-4 snap-none space-x-4">
       <div className="flex gap-4 schedule-scroll-left">
