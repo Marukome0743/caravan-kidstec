@@ -82,7 +82,7 @@ export default function Home(): React.JSX.Element {
           <span className="text-xl">21</span>日・
           <span className="text-xl">22</span>日、
           <br />
-          <span className="text-lg text-rose-400">千葉・東京エリア</span>
+          <span className="text-lg text-rose-400">{TOKYO_CHIBA.name}</span>
           で開催決定！
         </p>
         <Link href={AREA.href + TOKYO_CHIBA.href}>
