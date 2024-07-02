@@ -6,7 +6,12 @@ import Link from "next/link"
 import type React from "react"
 import { PanelTile } from "./components/layout/panelTile"
 import { Video } from "./components/media/video"
-import { NaturePanelItems, TechPanelItems } from "./lib/constant"
+import {
+  AREA,
+  NaturePanelItems,
+  TOKYO_CHIBA,
+  TechPanelItems,
+} from "./lib/constant"
 
 export default function Home(): React.JSX.Element {
   return (
@@ -80,7 +85,7 @@ export default function Home(): React.JSX.Element {
           <span className="text-lg text-rose-400">千葉・東京エリア</span>
           で開催決定！
         </p>
-        <Link href="/area/chiba">
+        <Link href={AREA.href + TOKYO_CHIBA.href}>
           <button type="button" className="bg-info btn text-lg text-white">
             内容・応募はこちら
             <ArrowRightIcon className="arrow-right size-5" />
