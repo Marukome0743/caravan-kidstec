@@ -1,5 +1,6 @@
 import { SlideUp } from "@/app/components/animation/slideUp"
 import { Carousel } from "@/app/components/layout/carousel"
+import { Navigation } from "@/app/components/layout/navigation"
 import { Video } from "@/app/components/media/video"
 import type { Picture } from "@/app/interfaces/picture"
 import type { Review } from "@/app/interfaces/review"
@@ -157,17 +158,7 @@ export default function Home(): React.JSX.Element {
         <ReviewCarousel />
       </section>
       <Video src="https://dk75m1tgsot44.cloudfront.net/movie/202312" />
-      {/* <section className="grid grid-cols-2 gap-4">
-        <div>
-          <Image
-            src="/caravan-kidstec_logo_line.avif"
-            width={1000}
-            height={1000}
-            alt="こどもテックキャラバン"
-            className="w-full"
-          />
-        </div>
-      </section> */}
+      <Navigation />
     </article>
   )
 }
