@@ -1,20 +1,19 @@
 "use client"
 
 import { HashtagIcon } from "@heroicons/react/24/solid"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import type React from "react"
 
 export function Divider(): React.JSX.Element {
   const ref: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null)
-  const [isShown, setIsShown] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          setIsShown(true)
+          entry.target.classList.add("stretch")
         } else {
-          setIsShown(false)
+          entry.target.classList.remove("stretch")
         }
       }
     })
@@ -31,7 +30,7 @@ export function Divider(): React.JSX.Element {
   })
 
   return (
-    <div ref={ref} className={`divider mx-auto${isShown ? " stretch" : ""}`}>
+    <div ref={ref} className="divider mx-auto">
       <HashtagIcon className="size-10" />
     </div>
   )
