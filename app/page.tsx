@@ -1,5 +1,6 @@
 import { SlideUp } from "@/app/components/animation/slideUp"
 import { Carousel } from "@/app/components/layout/carousel"
+import { Navigation } from "@/app/components/layout/navigation"
 import { Video } from "@/app/components/media/video"
 import type { Picture } from "@/app/interfaces/picture"
 import type { Review } from "@/app/interfaces/review"
@@ -14,30 +15,30 @@ import type React from "react"
 export default function Home(): React.JSX.Element {
   const techPictures: Picture[] = [
     {
-      alt: "兄弟で楽しくプログラミング",
-      src: "/202311/sandankyo/brothers.avif",
-    },
-    {
-      alt: "はんだ付けに集中",
+      alt: "はじめてのはんだづけにどきどき",
       src: "/202307/eda_island/soldering.avif",
     },
     {
-      alt: "黒画面と格闘中…",
-      src: "/202307/sandankyo/basic_programming.avif",
+      alt: "ロボット作りに挑戦！",
+      src: "/202311/eda_island/using_nipper.avif",
     },
     {
-      alt: "サポーターと一緒に勉強",
-      src: "/202311/sandankyo/pointing_out.avif",
-    },
-    {
-      alt: "自分のロボットにピース",
+      alt: "自分で作ったロボットの完成！",
       src: "/202311/sandankyo/peace_sign.avif",
+    },
+    {
+      alt: "親子で協力しながらプログラミング！上手に動くかな？",
+      src: "/202311/wedding/mother_check.avif",
+    },
+    {
+      alt: "最終日のロボサバ大会！優勝目指そう！",
+      src: "/202311/wedding/switch_on.avif",
     },
   ] as const
 
   const naturePictures: Picture[] = [
     {
-      alt: "SUP",
+      alt: "マリンスポーツで楽しい思い出！",
       src: "/202307/eda_island/mega_sap_group.avif",
     },
     {
@@ -157,17 +158,7 @@ export default function Home(): React.JSX.Element {
         <ReviewCarousel />
       </section>
       <Video src="https://dk75m1tgsot44.cloudfront.net/movie/202312" />
-      {/* <section className="grid grid-cols-2 gap-4">
-        <div>
-          <Image
-            src="/caravan-kidstec_logo_line.avif"
-            width={1000}
-            height={1000}
-            alt="こどもテックキャラバン"
-            className="w-full"
-          />
-        </div>
-      </section> */}
+      <Navigation />
     </article>
   )
 }
