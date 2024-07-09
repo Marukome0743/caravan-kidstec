@@ -10,6 +10,22 @@
   animation: banner 10s linear infinite;
 }
 
+.event-days {
+  --value: 15;
+}
+
+.event-hours {
+  --value: 10;
+}
+
+.event-minutes {
+  --value: 24;
+}
+
+.event-seconds {
+  --value: 10;
+}
+
 .fade-out-down {
   animation: fade-out-down 1.5s forwards;
 }
