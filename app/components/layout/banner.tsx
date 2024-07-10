@@ -66,7 +66,7 @@ export function Banner() {
         エリアで募集中！
         <ArrowTopRightOnSquareIcon className="size-5" />
       </p>
-      <div className="flex gap-5 mx-auto max-w-fit">
+      <div className="flex gap-3 mx-auto max-w-fit">
         <div>
           応募期限残り
           <span className="countdown font-mono ml-2 text-4xl">
