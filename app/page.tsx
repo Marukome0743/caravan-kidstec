@@ -2,6 +2,7 @@ import { SlideUp } from "@/app/components/animation/slideUp"
 import { Banner } from "@/app/components/layout/banner"
 import { Carousel } from "@/app/components/layout/carousel"
 import { Navigation } from "@/app/components/layout/navigation"
+import { Navigation2 } from "@/app/components/layout/navigation2"
 import { Video } from "@/app/components/media/video"
 import type { Panel } from "@/app/interfaces/picture"
 import type { Review } from "@/app/interfaces/review"
@@ -17,7 +18,6 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import type React from "react"
-import { Navigation2 } from "./components/layout/navigation2"
 
 export default function Home(): React.JSX.Element {
   const techPanels: Panel[] = [
