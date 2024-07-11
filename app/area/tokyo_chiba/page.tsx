@@ -48,6 +48,9 @@ export default function TokyoChiba(): React.JSX.Element {
   const guideline: Guideline = {
     participantsNumber: "２０組程",
     deadline: "２０２４年８月３１日",
+    lineLink: "https://lin.ee/a1BRnXT",
+    botImage: "/kai_icon.avif",
+    userImage: "/miku_icon.avif",
   }
 
   return (
@@ -70,7 +73,7 @@ export default function TokyoChiba(): React.JSX.Element {
           <br />
           応募画面へお進み下さい。
         </p>
-        <LineRegister />
+        <LineRegister lineLink={guideline.lineLink} />
       </section>
       <section className="grid gap-4">
         <h2 className="font-bold font-zenMaruGothic text-3xl">スケジュール</h2>
@@ -78,21 +81,21 @@ export default function TokyoChiba(): React.JSX.Element {
       </section>
       <Register guideline={guideline} />
       <section className="bg-amber-50 grid gap-1 mx-auto p-4 w-max">
-        <LineRegister />
+        <LineRegister lineLink={guideline.lineLink} />
       </section>
       <Video src="https://dk75m1tgsot44.cloudfront.net/movie/202312" />
     </>
   )
 }
 
-function LineRegister(): React.JSX.Element {
-  const lineLink: string = "https://lin.ee/a1BRnXT"
-
+function LineRegister({
+  lineLink,
+}: Readonly<{ lineLink: string }>): React.JSX.Element {
   return (
     <Link href={lineLink}>
       <button
         type="button"
-        className="bg-[#00C300] btn shadow-lg text-lg text-white"
+        className="bg-[#00C300] btn shadow-lg green_shine text-lg text-white"
       >
         LINEで簡単応募する！
         <ArrowRightIcon className="arrow-right size-5" />
