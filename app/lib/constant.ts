@@ -7,6 +7,7 @@ import {
   TrophyIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline"
+import type { EventDate } from "../interfaces/schedule"
 
 export const SITE_TITLE: string = "こどもテックキャラバン"
 export const HIROSHIMA_LINE: string = "https://lin.ee/LuSqIls"
@@ -68,3 +69,22 @@ export const TOKYO_CHIBA_GUIDELINE: Guideline = {
   deadline: "２０２４年８月３１日",
   lineLink: TOKYO_CHIBA_LINE,
 }
+
+export const HIROSHIMA_HISTORY: EventDate[] = [
+  {
+    date: "202206",
+    title: "第１回 2022年6月",
+  },
+  {
+    date: "202306",
+    title: "第２回 2023年6月",
+  },
+  {
+    date: "202311",
+    title: "第３回 2023年11月",
+  },
+  {
+    date: "202407",
+    title: "第４回 2024年7月",
+  },
+]
