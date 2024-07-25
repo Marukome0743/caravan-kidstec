@@ -1,5 +1,6 @@
 import type { Guideline } from "@/app/interfaces/guideline"
 import type { Menu, Submenu } from "@/app/interfaces/menu"
+import type { EventDate } from "@/app/interfaces/schedule"
 import {
   GlobeAsiaAustraliaIcon,
   HeartIcon,
