@@ -1,4 +1,4 @@
-import { SlideUp } from "@/app/components/animation/slideUp"
+import { SlideUp } from "@/app/components/animation/fadeInUp"
 import { Heading } from "@/app/components/layout/heading"
 import type { Supporter } from "@/app/interfaces/supporter"
 import { SUPPORTER } from "@/app/lib/constant"
