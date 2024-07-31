@@ -54,8 +54,10 @@ function Breadcrumb({
           </Link>
         </li>
         <li>
-          <menu.icon className={`size-5 mr-1 ${menu.color}`} />
-          {menu.name}
+          <Link href="/">
+            <menu.icon className={`size-5 mr-1 ${menu.color}`} />
+            {menu.name}
+          </Link>
         </li>
         {submenus?.map((submenu, index) =>
           index === submenus.length - 1 ? (
