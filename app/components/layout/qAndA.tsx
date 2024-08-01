@@ -69,12 +69,12 @@ export function QA({
   return (
     <>
       <Heading menu={menu} submenus={[submenu, Q_AND_A]} />
-      <section>
+      <section className="grid gap-2">
         {qAndAs.map((qAndA, index) => (
           <details
             key={qAndA.title}
             open={index === 0}
-            className="collapse collapse-arrow mb-2"
+            className="collapse collapse-arrow"
           >
             <summary className="bg-sky-50 collapse-title min-h-0 rounded-2xl text-center">
               {qAndA.question}
