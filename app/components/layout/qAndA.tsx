@@ -76,11 +76,11 @@ export function QA({
             open={index === 0}
             className="collapse collapse-arrow mb-2"
           >
-            <summary className="bg-amber-50 collapse-title min-h-0 rounded-2xl text-center">
+            <summary className="bg-sky-50 collapse-title min-h-0 rounded-2xl text-center">
               {qAndA.question}
             </summary>
-            <div className="bg-sky-100 chat chat-end py-2 rounded-2xl mt-2">
-              <span className="bg-orange-400 chat-bubble min-h-0 text-black whitespace-pre">
+            <div className="bg-sky-50 chat chat-end py-2 rounded-2xl mt-2">
+              <span className="bg-sky-400 chat-bubble min-h-0 text-black whitespace-pre">
                 {qAndA.answer}
               </span>
             </div>
