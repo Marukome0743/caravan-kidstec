@@ -1,6 +1,6 @@
 "use client"
 
-import { EVENT, TOKYO_CHIBA, TOKYO_CHIBA_GUIDELINE } from "@/app/lib/constant"
+import { EVENT, TOKYO_CHIBA, TOKYO_CHIBA_DEADLINE } from "@/app/lib/constant"
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { type JSX, type RefObject, useEffect, useRef } from "react"
@@ -80,7 +80,7 @@ export function Banner(): JSX.Element {
         【新着情報】
         <strong className={EVENT.color}>{TOKYO_CHIBA.name}</strong>
         で参加者を募集中！&nbsp;応募期限は
-        <strong>{TOKYO_CHIBA_GUIDELINE.deadline}</strong>
+        <strong>{TOKYO_CHIBA_DEADLINE}</strong>
         まで&nbsp;
         <ArrowTopRightOnSquareIcon className="size-5" />
       </p>
