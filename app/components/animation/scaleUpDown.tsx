@@ -35,7 +35,7 @@ export function ScaleUpDown({
   })
 
   return (
-    <span ref={ref} className={`${className ? ` ${className}` : ""}`}>
+    <span ref={ref} className={`${className ? `${className}` : ""}`}>
       {children}
     </span>
   )
