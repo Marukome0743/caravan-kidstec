@@ -42,7 +42,7 @@ export function Header(): JSX.Element {
           />
         </Link>
       </div>
-      <nav className="hidden navbar-center lg:flex">
+      <nav className="hidden navbar-end lg:flex">
         <Navigation isScrollDown={scrollY.isScrollDown} />
       </nav>
       <div className="navbar-end lg:hidden">
@@ -170,7 +170,7 @@ function Menu({
   href,
 }: { submenus: Submenu[]; href: string }): JSX.Element {
   return (
-    <ul className="p-2">
+    <ul className="py-2">
       {submenus.map((submenu) => (
         <li key={submenu.name}>
           <Link href={href + submenu.href} className="text-nowrap">
