@@ -207,7 +207,7 @@ export function ReviewCarousel(): JSX.Element {
   return (
     <div
       ref={carouselRef}
-      className="carousel relative space-x-4"
+      className="carousel carousel-center relative space-x-4"
       onMouseEnter={() => setIsMouseEnter(true)}
       onMouseLeave={() => setIsMouseEnter(false)}
       onScroll={() => ScrollEvent()}
