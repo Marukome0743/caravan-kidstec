@@ -1,21 +1,22 @@
 "use client"
 
+import type { Panel } from "@/app/interfaces/picture"
 import type { Schedule } from "@/app/interfaces/schedule"
 import { cloudfrontLoader } from "@/app/lib/loader"
 import Image from "next/image"
 import { type JSX, useState } from "react"
 
 export function EventTablist({
-  schedules,
-}: Readonly<{ schedules: Schedule[] }>): JSX.Element {
+  panels,
+}: Readonly<{ panels: Panel[] }>): JSX.Element {
   const [tab, setTab] = useState<string>("Day 1")
 
   return (
     <div className="sm:hidden">
       <div role="tablist" className="gap-2 tabs">
-        {schedules.map((schedule, index) => (
+        {panels.map((panel, index) => (
           <button
-            key={schedule.alt}
+            key={panel.alt}
             type="button"
             role="tab"
             onClick={() => setTab(`Day ${index + 1}`)}
@@ -25,46 +26,45 @@ export function EventTablist({
           </button>
         ))}
       </div>
-      {schedules.map(
-        (schedule, index) =>
+      {panels.map((panel) => (
+        <figure key={panel.alt} className="first-of-type:col-span-2">
+          <Image
+            loader={cloudfrontLoader}
+            src={panel.src}
+            height={1000}
+            width={1000}
+            alt={panel.alt}
+            className="w-full"
+          />
+          <figcaption
+            className={`bg-amber-50 font-bold grid items-center text-center whitespace-pre${panel.height ? ` ${panel.height}` : ""}`}
+          >
+            {panel.alt}
+          </figcaption>
+        </figure>
+      ))}
+      {panels.map(
+        (panel, index) =>
           tab === `Day ${index + 1}` && (
-            <div
-              key={schedule.alt}
+            <figure
+              key={panel.alt}
               role="tabpanel"
-              className="card m-2 shadow-lg"
+              className="first-of-type:col-span-2"
             >
               <Image
                 loader={cloudfrontLoader}
-                src={schedule.src}
-                width={1000}
+                src={panel.src}
                 height={1000}
-                alt={schedule.alt}
-                className="aspect-square object-cover rounded-t-2xl w-full"
+                width={1000}
+                alt={panel.alt}
+                className="w-full"
               />
-              <div className="bg-amber-50 card-body p-0 py-2 relative rounded-b-2xl">
-                <strong className="absolute bg-teal-400 left-0 px-2 py-1 text-white text-xs top-0">
-                  Day&nbsp;{index + 1}
-                </strong>
-                <h3 className="card-title mx-auto text-2xl whitespace-pre">
-                  {schedule.title}
-                </h3>
-                <strong className="text-sm">
-                  {schedule.date.year}年{schedule.date.month}月
-                  {schedule.date.day}
-                  日({schedule.date.dayOfWeek})&nbsp;10:00~17:00
-                </strong>
-                <div className="card-actions justify-center">
-                  {schedule.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="badge badge-outline bg-base-200 text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+              <figcaption
+                className={`bg-amber-50 font-bold grid items-center text-center whitespace-pre${panel.height ? ` ${panel.height}` : ""}`}
+              >
+                {panel.alt}
+              </figcaption>
+            </figure>
           ),
       )}
     </div>

@@ -7,6 +7,7 @@ import { cloudfrontLoader } from "@/app/lib/loader"
 import Image from "next/image"
 import Link from "next/link"
 import type { JSX } from "react"
+import { EventTablist } from "./components/layout/tablist"
 
 export default function Home(): JSX.Element {
   const techPanels: Panel[] = [
@@ -140,7 +141,7 @@ export default function Home(): JSX.Element {
           className="w-full"
         />
       </Link>
-      {sections.map((section) => (
+      {/* {sections.map((section) => (
         <section key={section.title} className="gap-2 grid grid-cols-2">
           <h2
             className={`col-span-2 font-bold font-zenMaruGothic text-3xl ${section.color}`}
@@ -148,6 +149,11 @@ export default function Home(): JSX.Element {
             {section.title}
           </h2>
           <PanelTile panels={section.panels} />
+        </section>
+      ))} */}
+      {sections.map((section) => (
+        <section key={section.title} className="gap-2 grid grid-cols-2">
+          <EventTablist panels={section.panels} />
         </section>
       ))}
       <section id="review" className="gap-4 grid">
