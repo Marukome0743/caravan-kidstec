@@ -142,6 +142,8 @@ export function ScheduleTablist({
               role="tabpanel"
               onMouseEnter={() => setIsMouseEnter(true)}
               onMouseLeave={() => setIsMouseEnter(false)}
+              onTouchStart={() => setIsMouseEnter(true)}
+              onTouchEnd={() => setIsMouseEnter(false)}
               className="card m-2 shadow-lg"
             >
               <Image
