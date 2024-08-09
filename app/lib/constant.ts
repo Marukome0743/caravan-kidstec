@@ -22,11 +22,6 @@ export const Q_AND_A: Submenu = {
   href: "/q-and-a",
   textColor: "text-sky-400",
 }
-export const PRIVACY_POLICY: Submenu = {
-  name: "個人情報保護方針",
-  href: "/privacy-policy",
-  textColor: "text-orange-400",
-}
 
 export const EVENT: Menu = {
   name: "開催予定",
