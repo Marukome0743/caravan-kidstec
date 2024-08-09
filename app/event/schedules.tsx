@@ -1,4 +1,6 @@
 import type { Schedule } from "@/app/interfaces/schedule"
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline"
+import Link from "next/link"
 import type { JSX } from "react"
 
 export function Schedules({
@@ -27,7 +29,14 @@ export function Schedules({
               <p>
                 <strong>{schedule.venue}</strong>
                 <br />
-                {schedule.address}
+                <Link
+                  href={schedule.googleMapLink || ""}
+                  target="_blank"
+                  className="link flex items-center gap-1"
+                >
+                  {schedule.address}
+                  <ArrowTopRightOnSquareIcon className="size-5" />
+                </Link>
               </p>
             </div>
           </li>
