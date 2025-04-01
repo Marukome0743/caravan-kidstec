@@ -1,4 +1,5 @@
 import type { Menu } from "@/app/interfaces/menu"
+import type { News } from "@/app/interfaces/news"
 import type { Partner } from "@/app/interfaces/partner"
 import type { Picture } from "@/app/interfaces/picture"
 import type { EventDate, Program } from "@/app/interfaces/schedule"
