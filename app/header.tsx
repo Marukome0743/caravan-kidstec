@@ -24,20 +24,16 @@ export function Header(): JSX.Element {
       )
   }, [])
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollState({
-        scrollY: window.scrollY,
-        isScrollDown: scrollState.scrollY < window.scrollY,
-      })
+  function ScrollHandler() {
+    setScrollState({
+      scrollY: window.scrollY,
+      isScrollDown: scrollState.scrollY < window.scrollY,
     })
-    return () =>
-      window.removeEventListener("scroll", () => {
-        setScrollState({
-          scrollY: window.scrollY,
-          isScrollDown: scrollState.scrollY < window.scrollY,
-        })
-      })
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => ScrollHandler)
+    return () => window.removeEventListener("scroll", () => ScrollHandler)
   })
 
   return (
@@ -72,17 +68,15 @@ function DropdownMenu({
       ref.current.open = false
     }
 
-    window.addEventListener("click", () => {
+    function CloseDialog() {
       if (ref.current) {
         ref.current.open = false
       }
-    })
+    }
+
+    window.addEventListener("click", () => CloseDialog)
     return () => {
-      window.removeEventListener("click", () => {
-        if (ref.current) {
-          ref.current.open = false
-        }
-      })
+      window.removeEventListener("click", () => CloseDialog)
     }
   })
 
@@ -136,26 +130,26 @@ function Navigation({
       }
     }
 
+    function CloseSummary(event: MouseEvent): void {
+      if (ref.current?.values()) {
+        for (const node of ref.current.values()) {
+          const rect = node.getBoundingClientRect()
+          if (
+            rect.left > event.clientX ||
+            rect.right < event.clientX ||
+            rect.top > event.clientY ||
+            rect.bottom < event.clientY
+          ) {
+            node.open = false
+          }
+        }
+      }
+    }
+
     window.addEventListener("click", (event) => CloseSummary(event))
     return () =>
       window.removeEventListener("click", (event) => CloseSummary(event))
   })
-
-  function CloseSummary(event: MouseEvent): void {
-    if (ref.current?.values()) {
-      for (const node of ref.current.values()) {
-        const rect = node.getBoundingClientRect()
-        if (
-          rect.left > event.clientX ||
-          rect.right < event.clientX ||
-          rect.top > event.clientY ||
-          rect.bottom < event.clientY
-        ) {
-          node.open = false
-        }
-      }
-    }
-  }
 
   return (
     <ul className="flex-nowrap gap-1 hidden lg:flex">
