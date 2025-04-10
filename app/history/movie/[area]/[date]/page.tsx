@@ -13,10 +13,26 @@ import {
 import type { Metadata } from "next"
 import type { JSX } from "react"
 
-export const metadata: Metadata = {
-  title: "活動実績",
-}
 export const dynamicParams: boolean = false
+
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: Promise<{ area: string; date: string }>
+}>): Promise<Metadata> {
+  const { area, date } = await params
+  const menu: Menu = `/${area}` === KANTO.pathname ? KANTO : HIROSHIMA
+  const history: EventDate[] =
+    `/${area}` === KANTO.pathname ? KANTO_HISTORY : HIROSHIMA_HISTORY
+  const eventDate: EventDate = history.find(
+    (history) => history.date === date,
+  ) as EventDate
+  return {
+    title: `${menu.name} ${eventDate.title} 動画`,
+    description: `${menu.name} ${eventDate.title} こどもテックキャラバンの動画`,
+  }
+}
+
 export function generateStaticParams(): { area: string; date: string }[] {
   const kantoArea: string = KANTO.pathname.split("/")[1]
   const kantoParams: { area: string; date: string }[] = KANTO_HISTORY.map(
