@@ -122,7 +122,7 @@ export default function KantoEvent(): JSX.Element {
   ] as const
 
   return (
-    <>
+    <div className="max-w-3xl mx-auto pb-4 space-y-6">
       <Heading menus={[KANTO_EVENT]} />
       <Image
         loader={cloudfrontLoader}
@@ -151,7 +151,7 @@ export default function KantoEvent(): JSX.Element {
       <Tablist schedules={schedules} />
       <Requirement guideline={guideline} />
       <MenuPanels menu={KANTO_EVENT} />
-    </>
+    </div>
   )
 }
 
