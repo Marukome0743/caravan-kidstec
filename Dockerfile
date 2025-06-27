@@ -8,6 +8,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
   bun i --frozen-lockfile
 COPY . .
 RUN bun test:app
+RUN bun i -g node && node -v
 RUN bun run build
 
 FROM gcr.io/distroless/nodejs24-debian12:nonroot
