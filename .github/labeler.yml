@@ -1,13 +1,15 @@
 🍱asset:
 - changed-files:
   - any-glob-to-any-file: ['**/*.avif', '**/*.ico', '**/*.png', '**/*.svg']
+🐛bug:
+- head-branch: ['^fix', 'fix']
 ♻️ci:
 - changed-files:
   - any-glob-to-any-file: '.github/**/*.yml'
 ⚙️config:
 - changed-files:
   - any-glob-to-any-file: '**/*config.*'
-📦dependencies:
+dependencies:
 - changed-files:
   - any-glob-to-any-file: ['bun.lock', '**/package.json']
 docker:
