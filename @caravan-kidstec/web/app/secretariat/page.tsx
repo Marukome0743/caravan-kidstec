@@ -4,6 +4,7 @@ import Link from "next/link"
 import type { JSX } from "react"
 import { CloudfrontImage } from "@/app/components/media/cloudfrontImage"
 import { Heading } from "@/app/components/layout/heading"
+import { CloudfrontImage } from "@/app/components/media/cloudfrontImage"
 import { SECRETARIAT } from "@/app/lib/constant"
 
 export default function Secretariat(): JSX.Element {
