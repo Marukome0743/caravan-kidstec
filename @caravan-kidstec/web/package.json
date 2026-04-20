@@ -44,8 +44,8 @@
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.10",
-    "@happy-dom/global-registrator": "^20.8.9",
+    "@biomejs/biome": "^2.4.12",
+    "@happy-dom/global-registrator": "^20.9.0",
     "@playwright/test": "next",
     "@tailwindcss/postcss": "^4.2.2",
     "@testing-library/dom": "^10.4.1",
@@ -53,9 +53,9 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "experimental",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "trustedDependencies": [
     "sharp"
